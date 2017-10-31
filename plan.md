@@ -121,6 +121,29 @@ production-ready software.
 [Rant about Uncle Bob opposing types and tests?]
 
 
+<!-- Frédéric -->
+## Libraries and documentation
+
+When building a Haskell project, you would most likely use Cabal or stack
+(which wraps Cabal with a notion of distribution of deps).
+
+With Cabal, packages are available in [hackage]. Stack handle various
+distributions of packages in its own repository [stackage]. You can forget about
+Stackage and consider Hackage the reference. Documentation is also available in
+those web sites, generated from the source code with haddock (same way javadoc
+and other do).
+
+[hackage]: https://hackage.haskell.org
+[stackage]: https://www.stackage.org/
+
+One very cool feature of the Haskell ecosystem is [hoogle], a search engine
+for functions and types, indexing most packages from hackage, and letting you
+search for functions by passing a signature. Hoogle is an API so you can easily
+use in your terminal or your IDE.
+
+[hoogle]: https://www.haskell.org/hoogle/
+
+
 <!-- Clément -->
 ## Haskell v. Scala
 
