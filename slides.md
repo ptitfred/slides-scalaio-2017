@@ -171,21 +171,11 @@ use in your terminal or your IDE.
 [hoogle]: https://www.haskell.org/hoogle/
 </details>
 
-<<<<<<< HEAD
---------------------------------------------------------------------------------
-=======
-------------------------------------------------------------------------------
->>>>>>> b6f4123... Separators
-
-<!-- Clément -->
-<!-- Haskell v. Scala -->
-
 ------------------------------------------------------------------------------
 
 <!-- Clément -->
 ## ADT
 
-------------------------------------------------------------------------------
 
 ```scala
 case class Peer(
@@ -301,12 +291,19 @@ compose :: (a -> b) -> (b -> c) -> (a -> c)
 compose = _
 ```
 
+------------------------------------------------------------------------------
+
 <!-- Clément -->
-## VSCode & Haskero? (Fred: Intero too?)
+## Tooling
+
+------------------------------------------------------------------------------
 
 <!-- Clément -->
 ## Devloop
 
+------------------------------------------------------------------------------
+
+<small><small>
 ```javascript
 'use strict'
 
@@ -318,11 +315,14 @@ let compile = run({
 let server = runServer({
   httpPort,
   env: { "PORT": httpPort },
-  sh: `./.stack-work/install/*/*/*/bin/cestpasnous`
+  sh: `./.stack-work/*/*/*/*/bin/cestpasnous`
 }).dependsOn(compile)
 
 proxy(server, 8080).dependsOn(compile)
 ```
+</small></small>
+
+------------------------------------------------------------------------------
 
 <!-- Clément Production? -->
 # Haskell in Production
@@ -365,20 +365,12 @@ Easy to integrate in statsd, prometheus, pure HTTP
 Dashboard available
 </details>
 
-<<<<<<< HEAD
 --------------------------------------------------------------------------------
-=======
-------------------------------------------------------------------------------
->>>>>>> b6f4123... Separators
 
 <!-- Beyond the PoC -->
 # Haskell beyond the PoC : maintenance, hiring, training
 
-<<<<<<< HEAD
 --------------------------------------------------------------------------------
-=======
-------------------------------------------------------------------------------
->>>>>>> b6f4123... Separators
 
 <!-- Frédéric -->
 <!-- Refactor all the things! Let the compiler guide you -->
