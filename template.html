@@ -284,12 +284,17 @@ $endif$
 $for(include-before)$
 $include-before$
 $endfor$
+<section class="intro-slide-fretlink">
+    <img src="assets/fretlink.png">
+</section>
 <section class="intro-slide">
     <img src="assets/itAuto.png">
 </section>
+<!--
 <section class="end-slide">
     <img src="assets/techs.png">
 </section>
+-->
 $body$
 <section class="intro-slide">
     <img src="assets/itAuto.png">
@@ -316,6 +321,16 @@ $dzslides-core$
     .intro-slide {
         background-color: #0B0629;
     }
+    .intro-slide-fretlink {
+        background-color: white;
+    }
+    .intro-slide-fretlink img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
     .end-slide img {
         display: block;
         width: 100%;
