@@ -445,8 +445,6 @@ Dashboard available
 ![](assets/metrics-advanced.png)
 
 
---------------------------------------------------------------------------------
-
 <!-- Beyond the PoC -->
 # Haskell beyond the PoC : maintenance, hiring, training
 
@@ -454,6 +452,30 @@ Dashboard available
 
 <!-- Frédéric -->
 <!-- Refactor all the things! Let the compiler guide you -->
+
+![](assets/zen-garden.jpg)
+
+--------------------------------------------------------------------------------
+
+## Split IO from pure code
+
+--------------------------------------------------------------------------------
+
+## Name things properly
+
+--------------------------------------------------------------------------------
+
+## Isolate implementation in modules
+
+--------------------------------------------------------------------------------
+
+## even a lot of modules
+
+--------------------------------------------------------------------------------
+
+## Write your own monads ;)
+
+--------------------------------------------------------------------------------
 
 <details role="note">
 Remember: the plan was to make it work. When POCing something, we have a lot
@@ -482,6 +504,8 @@ tooling.
 <!-- Frédéric -->
 <!-- The compiler loves you, but sometimes you'd like to trow it out -->
 
+## The compiler is your best friend
+
 <details role="note">
 To be honest, compilation errors may be very unhelpful when you don't know some
 theory. One of the biggest weakness of Haskell nowadays. There's hope for future
@@ -496,6 +520,16 @@ what you should had written.
 
 <!-- Frédéric -->
 <!-- Performance: the issue? Laziness, memory management, GC pauses -->
+
+## Laziness can be tricky
+
+--------------------------------------------------------------------------------
+
+## bust mostly for IO
+
+--------------------------------------------------------------------------------
+
+## Use pipes for lazy IO
 
 <details role="note">
 When you write Haskell code for the first time, you will most likely fell in
@@ -517,6 +551,8 @@ in OOM.
 
 <!-- Frédéric -->
 <!-- Hiring: train them, don't hire them -->
+
+## Good developers like abstraction, polymorphism
 
 <details role="note">
 I stopped hiring Ruby developers at Captain Train, I only hired good developers.
@@ -547,6 +583,8 @@ can enjoy Haskell to write better code, even in their original language.
 <!-- Frédéric -->
 <!-- Training: Haskell as a way to better understand complex systems -->
 
+## Haskell purity as a blessing
+
 <details role="note">
 How purity, explicit IO, Functor/Applicative help you understand what's going
 on. Being force to split effects, control structures, pure logic code, is very
@@ -557,13 +595,13 @@ He/she will go back to Haskell willing to get back all this safety and
 expressiveness.
 </details>
 
---------------------------------------------------------------------------------
-
 <!-- Future -->
 # Future of the language
 
 <!-- Frédéric -->
 <!-- Elm, Purescript: other ways to write good software -->
+
+## Elm or Purescript for the web
 
 <details role="note">
 OK that's not exactly the future. It's already there and it will live along with
@@ -587,6 +625,12 @@ management.
 
 <!-- Frédéric -->
 <!-- Servant to document your APIs, even if you're not writing Haskell code -->
+
+## Servant to generate docs
+
+--------------------------------------------------------------------------------
+
+## or generate clients
 
 <details role="note">
 I talked a bit of Servant. This is a very cool library if you're ok with
@@ -630,8 +674,30 @@ For more about Servant, the [docs [servant-tutorial] and a good introduction [se
 
 --------------------------------------------------------------------------------
 
+Servant tutorial: [](http://haskell-servant.readthedocs.io)
+
+--------------------------------------------------------------------------------
+
+An Introduction to Servant: [](https://www.youtube.com/watch?v=gMDiKOuwLXw)
+
+--------------------------------------------------------------------------------
+
 <!-- Frédéric -->
 <!-- GHC 8.4, Dependent Types, Linear Types: the language is evolving -->
+
+## GHC 8.4
+
+--------------------------------------------------------------------------------
+
+## Dependent Types
+
+--------------------------------------------------------------------------------
+
+## Linear Types
+
+--------------------------------------------------------------------------------
+
+## quite alive for an old language
 
 <details role="note">
 Microsoft, Facebook and some banks are actively supporting the developpement of
