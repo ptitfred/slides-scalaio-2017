@@ -1,4 +1,4 @@
-% Production haskell in a startup in 2017? Yup
+% Haskell in Production in a Startup in 2017? Yup
 % Frédéric Menou / [Fretlink](https://fretlink.com)
 % Clément Delafargue / [Clever Cloud](https://clever-cloud.com)
 % 2017-11-02
