@@ -308,7 +308,10 @@ instance Monoid Ordering where
 trait Hole
 case object Hole_
 
-def compose[A,B,C](f: A => B, g: B => C): (A => C) = Hole
+def compose[A,B,C](
+    f: A => B,
+    g: B => C
+): (A => C) = Hole_
 ```
 
 ------------------------------------------------------------------------------
