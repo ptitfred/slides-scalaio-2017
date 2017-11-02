@@ -202,6 +202,7 @@ use in your terminal or your IDE.
 <!-- Clément -->
 ## ADT
 
+------------------------------------------------------------------------------
 
 ```scala
 case class Peer(
