@@ -99,6 +99,25 @@ finally taken, following the arrival of a new developer.
 
 --------------------------------------------------------------------------------
 
+```haskell
+import Database.PostgreSQL.Simple
+    (Query, Connection, Serial, query)
+import Data.Text (Text)
+
+countryByCode :: Query
+countryByCode =
+  "SELECT country_id FROM countries" <>
+  "WHERE iso3166_code = ?"
+
+getCountryByCode :: Connection
+                 -> Text
+                 -> IO Serial
+getCountryByCode conn t =
+  query conn countryByCode (Only t)
+```
+
+--------------------------------------------------------------------------------
+
 <!-- Frédéric -->
 
 ## Serving data
