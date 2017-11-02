@@ -134,10 +134,8 @@ a whole HTTP service in Haskell from the source to the production. Let us
 present that to you.
 </details>
 
---------------------------------------------------------------------------------
-
 <!-- Day to day -->
-# day-to-day: how do you code in Haskell, and test it?
+# On a daily basis
 
 <!-- Frédéric -->
 <!-- Make it compile -->
@@ -207,10 +205,6 @@ credits: Lucas Di Cioccio
 
 --------------------------------------------------------------------------------
 
-## Don't be the Kmett
-
---------------------------------------------------------------------------------
-
 ![](assets/cokmett.png)
 
 <div style="z-index: 2000; position: absolute; top: -1em">
@@ -222,19 +216,34 @@ https://cokmett.github.io/cokmett
 <!-- Frédéric -->
 <!-- Libraries and documentation -->
 
+## hackage for the libs
+
 <details role="note">
 When building a Haskell project, you would most likely use Cabal or stack
 (which wraps Cabal with a notion of distribution of deps).
 
+[hackage]: https://hackage.haskell.org
+</details>
+
+------------------------------------------------------------------------------
+
+## stackage for the LTS
+
+<details role="note">
 With Cabal, packages are available in [hackage]. Stack handle various
 distributions of packages in its own repository [stackage]. You can forget about
 Stackage and consider Hackage the reference. Documentation is also available in
 those web sites, generated from the source code with haddock (same way javadoc
 and other do).
 
-[hackage]: https://hackage.haskell.org
 [stackage]: https://www.stackage.org/
+</details>
 
+------------------------------------------------------------------------------
+
+## hoogle: lookup functions by its signature
+
+<details role="note">
 One very cool feature of the Haskell ecosystem is [hoogle], a search engine
 for functions and types, indexing most packages from hackage, and letting you
 search for functions by passing a signature. Hoogle is an API so you can easily
@@ -242,6 +251,10 @@ use in your terminal or your IDE.
 
 [hoogle]: https://www.haskell.org/hoogle/
 </details>
+
+------------------------------------------------------------------------------
+
+![](assets/hoogle.png)
 
 ------------------------------------------------------------------------------
 
@@ -274,9 +287,9 @@ case class RemovePeer(pubkey: String)
 
 ```haskell
 data Peer = Peer
-  { cidrs :: [Text]
-  , pubkey :: Text
-  , endpoint :: Text
+  { cidrs     :: [Text]
+  , pubkey    :: Text
+  , endpoint  :: Text
   , keepalive :: Int
   }
 ```
@@ -308,7 +321,7 @@ def handleCommand(c: WgCommand) = c match {
 
 handleCommand :: Command -> IO ()
 handleCommand InitConfig{..} = error "ToDo"
-handleCommand SetPeer{..} = error "ToDo"
+handleCommand SetPeer{..}    = error "ToDo"
 handleCommand RemovePeer{..} = error "ToDo"
 ```
 
@@ -320,20 +333,20 @@ handleCommand RemovePeer{..} = error "ToDo"
 
 ```haskell
 class Monoid a where
-        mempty  :: a
-        mappend :: a -> a -> a
-        mconcat :: [a] -> a
-        mconcat = foldr mappend mempty
+    mempty  :: a
+    mappend :: a -> a -> a
+    mconcat :: [a] -> a
+    mconcat = foldr mappend mempty
 ```
 
 ------------------------------------------------------------------------------
 
 ```haskell
 instance Monoid Ordering where
-        mempty         = EQ
-        LT `mappend` _ = LT
-        EQ `mappend` y = y
-        GT `mappend` _ = GT
+    mempty         = EQ
+    LT `mappend` _ = LT
+    EQ `mappend` y = y
+    GT `mappend` _ = GT
 ```
 
 ------------------------------------------------------------------------------
