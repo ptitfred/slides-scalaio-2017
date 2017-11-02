@@ -1,7 +1,12 @@
-# Who are we?
+## Clément Delafargue @clementd
 
-- Clément Delafarque, CTO Clever Cloud, a PaaS.
-- Frédéric Menou, CTO FretLink, a Markeplace in freight.
+--------------------------------------------------------------------------------
+
+## Yup
+
+--------------------------------------------------------------------------------
+
+## <span style='text-decoration:line-through'>Yup</span><br/>Frédéric Menou<br/>@ptit_fred
 
 --------------------------------------------------------------------------------
 
