@@ -297,6 +297,16 @@ data Peer = Peer
 ------------------------------------------------------------------------------
 
 ```haskell
+
+
+
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE RecordWildCards       #-}
+```
+
+------------------------------------------------------------------------------
+
+```haskell
 data WgCommand =
     InitConfig Text Text Text Int
     SetPeer Peer
@@ -307,8 +317,8 @@ data WgCommand =
 
 ```scala
 def handleCommand(c: WgCommand) = c match {
-  case InitConfig(_) => ???
-  case SetPeer(peer) => ???
+  case InitConfig(_)      => ???
+  case SetPeer(peer)      => ???
   case RemovePeer(pubkey) => ???
 }
 ```
@@ -316,9 +326,6 @@ def handleCommand(c: WgCommand) = c match {
 ------------------------------------------------------------------------------
 
 ```haskell
-{-# LANGUAGE DuplicateRecordFields #-}
-{-# LANGUAGE RecordWildCards       #-}
-
 handleCommand :: Command -> IO ()
 handleCommand InitConfig{..} = error "ToDo"
 handleCommand SetPeer{..}    = error "ToDo"
