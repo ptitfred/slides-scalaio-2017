@@ -341,8 +341,8 @@ data Peer = Peer
 ```haskell
 data WgCommand =
     InitConfig Text Text Text Int
-    SetPeer Peer
-    RemovePeer Text
+  | SetPeer Peer
+  | RemovePeer Text
 ```
 
 ------------------------------------------------------------------------------
@@ -631,6 +631,8 @@ expressiveness.
 <!-- Future -->
 # Future of the language
 
+--------------------------------------------------------------------------------
+
 <!-- Frédéric -->
 <!-- Elm, Purescript: other ways to write good software -->
 
@@ -659,7 +661,7 @@ management.
 <!-- Frédéric -->
 <!-- Servant to document your APIs, even if you're not writing Haskell code -->
 
-## Servant to document
+## Servant to document your APIs
 
 --------------------------------------------------------------------------------
 
@@ -770,5 +772,8 @@ experiment advanced concepts as it was at the beginning.
 
 --------------------------------------------------------------------------------
 
-<!-- Clément & Frédéric -->
-# Some conclusion?
+## Recap
+
+--------------------------------------------------------------------------------
+
+## Questions?
