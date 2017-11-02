@@ -175,7 +175,7 @@ code, you'll make it solid and pretty in the next step.
 <!-- Frédéric -->
 <!-- Abstractions, elegant solutions: avoid code-golf -->
 
-## Write dirty code
+## Write dirty code first
 
 <details role="note">
 Your job is to write code that's working. Then you refactor, affine the concepts.
@@ -183,7 +183,11 @@ Your job is to write code that's working. Then you refactor, affine the concepts
 
 --------------------------------------------------------------------------------
 
-## but it should work!
+## make it work
+
+--------------------------------------------------------------------------------
+
+## then make it clean
 
 --------------------------------------------------------------------------------
 
@@ -226,6 +230,14 @@ credits: Lucas Di Cioccio
 <div style="z-index: 2000; position: absolute; top: -1em">
 https://cokmett.github.io/cokmett
 </div>
+
+--------------------------------------------------------------------------------
+
+## Unit Tests: HUnit & RSpec
+
+--------------------------------------------------------------------------------
+
+## Property Testing: <b>QuickCheck</b>
 
 --------------------------------------------------------------------------------
 
@@ -706,11 +718,11 @@ For more about Servant, the [docs [servant-tutorial] and a good introduction [se
 
 --------------------------------------------------------------------------------
 
-Servant tutorial: [](http://haskell-servant.readthedocs.io)
+Servant tutorial<br/><http://haskell-servant.readthedocs.io>
 
 --------------------------------------------------------------------------------
 
-An Introduction to Servant: [](https://www.youtube.com/watch?v=gMDiKOuwLXw)
+An Introduction to Servant<br/><https://www.youtube.com/watch?v=gMDiKOuwLXw>
 
 --------------------------------------------------------------------------------
 
