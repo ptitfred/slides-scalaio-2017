@@ -149,8 +149,115 @@ use in your terminal or your IDE.
 
 <!-- Clément -->
 ## ADT
+
+
+```scala
+case class Peer(
+  cidrs: List[String],
+  pubkey: String,
+  endpoint: String,
+  keepalive: Int)
+```
+
+------------------------------------------------------------------------------
+
+```scala
+sealed trait WgCommand
+case class InitConfig(…)
+  extends WgCommand
+case class SetPeer(peer: Peer)
+  extends WgCommand
+case class RemovePeer(pubkey: String)
+  extends WgCommand
+```
+
+------------------------------------------------------------------------------
+
+```haskell
+data Peer = Peer
+  { cidrs :: [Text]
+  , pubkey :: Text
+  , endpoint :: Text
+  , keepalive :: Int
+  }
+```
+
+------------------------------------------------------------------------------
+
+```haskell
+data WgCommand =
+    InitConfig Text Text Text Int
+    SetPeer Peer
+    RemovePeer Text
+```
+
+------------------------------------------------------------------------------
+
+```scala
+def handleCommand(c: WgCommand) = c match {
+  case InitConfig(_) => ???
+  case SetPeer(peer) => ???
+  case RemovePeer(pubkey) => ???
+}
+```
+
+------------------------------------------------------------------------------
+
+```haskell
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE RecordWildCards       #-}
+
+handleCommand :: Command -> IO ()
+handleCommand InitConfig{..} = error "ToDo"
+handleCommand SetPeer{..} = error "ToDo"
+handleCommand RemovePeer{..} = error "ToDo"
+```
+
 ## Typeclasses
+
+------------------------------------------------------------------------------
+
+```haskell
+class Monoid a where
+        mempty  :: a
+        mappend :: a -> a -> a
+        mconcat :: [a] -> a
+        mconcat = foldr mappend mempty
+```
+
+------------------------------------------------------------------------------
+
+```haskell
+instance Monoid Ordering where
+        mempty         = EQ
+        LT `mappend` _ = LT
+        EQ `mappend` y = y
+        GT `mappend` _ = GT
+```
+
+------------------------------------------------------------------------------
+
+## Convergence
+
+## Orphan Instances
+
 ## Hole-Driven Development
+
+------------------------------------------------------------------------------
+
+```scala
+trait Hole
+case object Hole_
+
+def compose[A,B,C](f: A => B, g: B => C): (A => C) = Hole
+```
+
+------------------------------------------------------------------------------
+
+```haskell
+compose :: (a -> b) -> (b -> c) -> (a -> c)
+compose = _
+```
 
 <!-- Clément -->
 ## VSCode & Haskero? (Fred: Intero too?)
