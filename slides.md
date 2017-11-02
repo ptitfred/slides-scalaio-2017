@@ -8,17 +8,14 @@
 <!-- Frédéric -->
 <!-- Why Haskell? Examples of stuff done in 1 year -->
 
-Why Haskell?
+## Why Haskell?
 
 <details role="note">
-When I first publicly spoke about Haskell at DevFest Nantes 2016, I hadn't
-actually wrote much. I spent most of my time parsing text files and writing
-some utilities around that, but nothing more. As you can see I had all the
-arguments to convince others to stop writing JS! A leap of faith.
+A lot of parsing (parser combinators <3).
 
-Haskell teached me a few things back in 2014 and 2015 and thanks to this new
-knowledge I wrote some tricky Ruby code at Capitaine Train. This code is still
-running and those of you that bought a TGV ticket to come to Lyon have used it!
+A leap of faith.
+
+Haskell as a teaching tool for FP to write better code.
 </details>
 
 --------------------------------------------------------------------------------
@@ -26,28 +23,25 @@ running and those of you that bought a TGV ticket to come to Lyon have used it!
 <!-- Frédéric -->
 <!-- It started with some CLIs -->
 
-Command-Line Tools
+## Command-Line Tools
 
 <details role="note">
-_October 2016_
+October 2016
 
-First I had to migrate the email to GSuite, so I wrote a command-line tool to
-create users in GSuite, configure email redirections in the old system and
-slowly migrate data from the old provider to the new one.
+Migration tool for Emails (OVH -> Gmail). A CLI. Mostly IO + Maybe.
 
-I had to consume HTTP APIs, handle UTF-8 strings, be idempotent, parse some
-exotic data files.
+- consume HTTP APIs
 
-Google APIs work all the same, and the tricky part is to handle the OAuth2 dance.
-I was lucky to have it already done for another project consuming Youtube APIs.
+- handle UTF-8 strings
 
-All I had to do was to isolate the Youtube part from the API part, and then
-write the client code for the Google Suite Admin APIs which consists of mostly
-ADTs + JSON serialization. Never touch it again, still used right now in a
-larger CLI calling providers APIs left & right.
+- be idempotent
 
-I was then still writing HTTP code without enjoying Servant, how foolish I was
-back then.
+- parse some exotic data files.
+
+Refactoring from existing codebase written for YouTube APIS: ADTS + Aeson.
+
+Never touch it again, still used right now in a larger CLI calling providers
+APIs left & right.
 </details>
 
 --------------------------------------------------------------------------------
@@ -55,26 +49,25 @@ back then.
 <!-- Frédéric -->
 <!-- Then some tooling with Google Sheet -->
 
-APIs + Google Sheet = <3
+## APIs + Google Sheets = <3
 
 <details role="note">
-_March 2017_
+March 2017
 
-First actual HTTP service I wrote in Haskell, consisting simply in consuming
-Google Maps API and OSRM API, with some option rendering.
+First actual HTTP service in Haskell, consuming GMaps API and OSRM APIs.
 
 [Screenshot of distance computation tool integrated in Google Sheet]
 
 Wrote once, forgot about it, and it's still working (in CleverCloud <3).
 
-Adding some Redis cache was as simple as prefixing IO method call by a `cache` method.
+Added Redis cache by wrapping an IO method.
 
-The original code was a CLI consuming a CSV file to help the team answering
-tenders. Putting CLI code on the web is quite easy, especially with Servant.
-
-This is used internally by very various people, from the Data Scientist to the
-Sales. It's there, everybody can use it, nobody has to maintain it.
+CLI converted to HTTP service (changing the main mostly).
 </details>
+
+--------------------------------------------------------------------------------
+
+# ![](assets/google-sheets-demo.png)
 
 --------------------------------------------------------------------------------
 
@@ -83,9 +76,42 @@ Sales. It's there, everybody can use it, nobody has to maintain it.
 <!-- Frédéric -->
 <!-- Finally HTTP services in production -->
 
-<details role="note">
-_June 2017_
+## HTTP with Servant
 
+<details role="note">
+June 2017
+
+With more experience regarding Haskell code and the benefit you can got, the
+idea to migrate actual production code to a fresh version in pure Haskell was
+finally taken, following the arrival of a new developer.
+</details>
+
+--------------------------------------------------------------------------------
+
+<!-- Frédéric -->
+
+## Consuming Databases
+
+--------------------------------------------------------------------------------
+
+<!-- Frédéric -->
+
+## Serving data
+
+--------------------------------------------------------------------------------
+
+<!-- Frédéric -->
+
+## Supporting back-office functions
+
+--------------------------------------------------------------------------------
+
+<!-- Frédéric -->
+<!-- Finally HTTP services in production -->
+
+## Business rules should be readable.
+
+<details role="note">
 With more experience regarding Haskell code and the benefit you can got, the
 idea to migrate actual production code to a fresh version in pure Haskell was
 finally taken, following the arrival of a new developer.
