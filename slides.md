@@ -109,7 +109,7 @@ finally taken, following the arrival of a new developer.
 <!-- Frédéric -->
 <!-- Finally HTTP services in production -->
 
-## Business rules should be readable.
+## Business rules should be readable
 
 <details role="note">
 With more experience regarding Haskell code and the benefit you can got, the
@@ -151,7 +151,24 @@ code, you'll make it solid and pretty in the next step.
 --------------------------------------------------------------------------------
 
 <!-- Frédéric -->
-<!-- Abstractions, elegant solutions: avoid golf contests -->
+<!-- Abstractions, elegant solutions: avoid code-golf -->
+
+## Write dirty code
+
+<details role="note">
+Your job is to write code that's working. Then you refactor, affine the concepts.
+</details>
+
+--------------------------------------------------------------------------------
+
+## but it should work!
+
+<details role="note">
+</details>
+
+--------------------------------------------------------------------------------
+
+## Code-golf is bad
 
 <details role="note">
 Your job is to write code that's working. Then you refactor, affine the concepts.
@@ -170,6 +187,30 @@ production-ready software.
 
 [Rant about Uncle Bob opposing types and tests?]
 </details>
+
+--------------------------------------------------------------------------------
+
+## Usable code is simple
+
+--------------------------------------------------------------------------------
+
+![](assets/haskell-pyramid.png)
+
+<div style="z-index: 2000; position: absolute; bottom: 2em">
+credits: Lucas Di Cioccio
+</div>
+
+--------------------------------------------------------------------------------
+
+## Don't be the Kmett
+
+--------------------------------------------------------------------------------
+
+![](assets/cokmett.png)
+
+<div style="z-index: 2000; position: absolute; top: -1em">
+https://cokmett.github.io/cokmett
+</div>
 
 --------------------------------------------------------------------------------
 
