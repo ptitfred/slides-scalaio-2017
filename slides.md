@@ -171,10 +171,16 @@ use in your terminal or your IDE.
 [hoogle]: https://www.haskell.org/hoogle/
 </details>
 
+<<<<<<< HEAD
 --------------------------------------------------------------------------------
+=======
+------------------------------------------------------------------------------
+>>>>>>> b6f4123... Separators
 
 <!-- Clément -->
 <!-- Haskell v. Scala -->
+
+------------------------------------------------------------------------------
 
 <!-- Clément -->
 ## ADT
@@ -242,6 +248,8 @@ handleCommand SetPeer{..} = error "ToDo"
 handleCommand RemovePeer{..} = error "ToDo"
 ```
 
+------------------------------------------------------------------------------
+
 ## Typeclasses
 
 ------------------------------------------------------------------------------
@@ -268,7 +276,11 @@ instance Monoid Ordering where
 
 ## Convergence
 
+------------------------------------------------------------------------------
+
 ## Orphan Instances
+
+------------------------------------------------------------------------------
 
 ## Hole-Driven Development
 
@@ -314,6 +326,10 @@ proxy(server, 8080).dependsOn(compile)
 <!-- Clément Production? -->
 # Haskell in Production
 
+<details role="note">
+stressant par rapport à java, mais finalement pas si méchant
+</details>
+
 ------------------------------------------------------------------------------
 
 ## Build: <3 stack LTS && lockfile
@@ -330,11 +346,15 @@ Même build pour tout le monde, build automatisable et robuste
 Easy for CLI tooling, stuff like that
 </details>
 
+------------------------------------------------------------------------------
+
 ## Dependencies caching
 
 <details role="note">
 Essential for continuous deployment.
 </details>
+
+------------------------------------------------------------------------------
 
 ## Monitoring && metrics: <3 EKG
 
@@ -344,12 +364,20 @@ Easy to integrate in statsd, prometheus, pure HTTP
 Dashboard available
 </details>
 
+<<<<<<< HEAD
 --------------------------------------------------------------------------------
+=======
+------------------------------------------------------------------------------
+>>>>>>> b6f4123... Separators
 
 <!-- Beyond the PoC -->
 # Haskell beyond the PoC : maintenance, hiring, training
 
+<<<<<<< HEAD
 --------------------------------------------------------------------------------
+=======
+------------------------------------------------------------------------------
+>>>>>>> b6f4123... Separators
 
 <!-- Frédéric -->
 <!-- Refactor all the things! Let the compiler guide you -->
