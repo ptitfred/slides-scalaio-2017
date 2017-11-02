@@ -647,6 +647,21 @@ management.
 
 --------------------------------------------------------------------------------
 
+```haskell
+newtype PositionQuery = PositionQuery Text
+
+data Route =
+  Route { distance :: Maybe Double
+        }
+
+type API = "route"
+         :> QueryParam "from" PositionQuery
+         :> QueryParam "to"   PositionQuery
+         :> Get '[JSON] Route
+```
+
+--------------------------------------------------------------------------------
+
 ## or generate clients
 
 <details role="note">
