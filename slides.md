@@ -166,9 +166,6 @@ Your job is to write code that's working. Then you refactor, affine the concepts
 
 ## but it should work!
 
-<details role="note">
-</details>
-
 --------------------------------------------------------------------------------
 
 ## Code-golf is bad
@@ -418,8 +415,6 @@ proxy(server, 8080).dependsOn(compile)
 ```
 </small></small>
 
-------------------------------------------------------------------------------
-
 <!-- Clément Production? -->
 # Haskell in Production
 
@@ -471,7 +466,11 @@ Dashboard available
 
 
 <!-- Beyond the PoC -->
-# Haskell beyond the PoC : maintenance, hiring, training
+# Beyond the PoC
+
+--------------------------------------------------------------------------------
+
+## Refactoring
 
 --------------------------------------------------------------------------------
 
@@ -499,8 +498,6 @@ Dashboard available
 --------------------------------------------------------------------------------
 
 ## Write your own monads ;)
-
---------------------------------------------------------------------------------
 
 <details role="note">
 Remember: the plan was to make it work. When POCing something, we have a lot
@@ -547,30 +544,6 @@ what you should had written.
 <!-- Performance: the issue? Laziness, memory management, GC pauses -->
 
 ## Laziness can be tricky
-
---------------------------------------------------------------------------------
-
-## bust mostly for IO
-
---------------------------------------------------------------------------------
-
-## Use pipes for lazy IO
-
-<details role="note">
-When you write Haskell code for the first time, you will most likely fell in
-the common trap of laziness and the consequences for your runtime.
-
-Haskell code is declarative, expressing what you want to obtain from the machine
-rather than telling the machine what to do (imperative code).
-
-This results in expressions where you can't tell how it's evaluated and how
-the memory will be used. Laziness is the evil in the box for beginners because
-you will most likely produce code requiring a lot of memory before producing a
-single result.
-
-The main consequence is that you software might pause in GC or even worse fail
-in OOM.
-</details>
 
 --------------------------------------------------------------------------------
 
@@ -651,7 +624,7 @@ management.
 <!-- Frédéric -->
 <!-- Servant to document your APIs, even if you're not writing Haskell code -->
 
-## Servant to generate docs
+## Servant to document
 
 --------------------------------------------------------------------------------
 
