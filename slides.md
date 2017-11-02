@@ -265,17 +265,55 @@ compose = _
 <!-- Clément -->
 ## Devloop
 
+```javascript
+'use strict'
+
+let compile = run({
+  sh: 'stack build',
+  watch: '*.hs'
+})
+
+let server = runServer({
+  httpPort,
+  env: { "PORT": httpPort },
+  sh: `./.stack-work/install/*/*/*/bin/cestpasnous`
+}).dependsOn(compile)
+
+proxy(server, 8080).dependsOn(compile)
+```
+
 <!-- Clément Production? -->
 # Haskell in Production
 
+------------------------------------------------------------------------------
+
 ## Build: <3 stack LTS && lockfile
+
+<details role="note">
+Même build pour tout le monde, build automatisable et robuste
+</details>
+
+------------------------------------------------------------------------------
 
 ## Single binary
 
+<details role="note">
+Easy for CLI tooling, stuff like that
+</details>
+
 ## Dependencies caching
+
+<details role="note">
+Essential for continuous deployment.
+</details>
 
 ## Monitoring && metrics: <3 EKG
 
+<details role="note">
+EKG way easier to use than JMX (IMO).
+Easy to integrate in statsd, prometheus, pure HTTP
+Dashboard available
+</details>
 
 <!-- Beyond the PoC -->
 # Haskell beyond the PoC : maintenance, hiring, training
